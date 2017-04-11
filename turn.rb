@@ -21,8 +21,7 @@ class Turn
   end
   
   def show_score
-    player1_lives = @player1.lives
-    player2_lives = @player2.lives
+    player1_lives, player2_lives = @player1.lives, @player2.lives
     puts "#{@player1.name}: #{player1_lives}/3 vs #{@player2.name}: #{player2_lives}/3"
   end
   
