@@ -1,12 +1,11 @@
-require_relative 'math_game'
 require_relative 'player'
 require_relative 'turn'
 
-bender = Player.new("Bender")
-zoidberg = Player.new("Zoidberg")
+bender = Math_game::Player.new("Bender")
+zoidberg = Math_game::Player.new("Zoidberg")
 
 while bender.still_alive? && zoidberg.still_alive? do
-  turn = Turn.new(bender, zoidberg)
+  turn = Math_game::Turn.new(bender, zoidberg)
   turn.play
 end
 
